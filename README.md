@@ -1,2 +1,2 @@
-# tabnews-clone
-implementation of https://www.tabnews.com.br/
+# tabnews
+implementação do https://www.tabnews.com.br/
