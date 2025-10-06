@@ -1,0 +1,24 @@
+{
+  "name": "tabnews",
+  "version": "1.0.0",
+  "description": "implementação do https://www.tabnews.com.br/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocavalhere6/tabnews.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leocavalhere6/tabnews/issues"
+  },
+  "homepage": "https://github.com/leocavalhere6/tabnews#readme",
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
