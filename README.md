@@ -1,3 +1,3 @@
 # tabnews
 
-implementação do https://www.tabnews.com.br/
+implementação do tabnews-weld-ten.vercel.app
