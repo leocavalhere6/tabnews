@@ -8,25 +8,32 @@ async function fetchAPI(key) {
 
 export default function StatusPage() {
   return (
-    <>
-      <h1>Status</h1>;
-      <UpdatedAt />;
+    <main>
+      <h1>Status</h1>
+      <UpdatedAt />
       <DatabaseStatus />
-    </>
+    </main>
   );
 }
+
+/* ===== Components ===== */
 
 function UpdatedAt() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
     refreshInterval: 2000,
   });
 
-  let UpdatedAtText = "Carregando...";
+  let updatedAtText = "Carregando...";
 
   if (!isLoading && data) {
-    UpdatedAtText = new Date(data.updated_at).toLocaleString("pt-BR");
+    updatedAtText = new Date(data.updated_at).toLocaleString("pt-BR");
   }
-  return <div>Última estruturação: {UpdatedAtText}</div>;
+
+  return (
+    <p>
+      Última estruturação: <strong>{updatedAtText}</strong>
+    </p>
+  );
 }
 
 function DatabaseStatus() {
@@ -34,25 +41,25 @@ function DatabaseStatus() {
     refreshInterval: 2000,
   });
 
-  let databaseStatusInformation = "Carregando...";
-
-  if (!isLoading && data) {
-    databaseStatusInformation = (
-      <>
-        <div>Versão: {data.dependencies.database.version}</div>
-        <div>
-          conexões abertas: {data.dependencies.database.opened_connections}
-        </div>
-        <div>
-          conexões máximas: {data.dependencies.database.max_connections}
-        </div>
-      </>
-    );
+  if (isLoading || !data) {
     return (
-      <>
+      <div className="card">
         <h2>Database</h2>
-        <div>{databaseStatusInformation}</div>
-      </>
+        <div className="status">Carregando...</div>
+      </div>
     );
   }
+
+  const database = data.dependencies.database;
+
+  return (
+    <div className="card">
+      <h2>Database</h2>
+      <div className="status">
+        <div>Versão: {database.version}</div>
+        <div>Conexões abertas: {database.opened_connections}</div>
+        <div>Conexões máximas: {database.max_connections}</div>
+      </div>
+    </div>
+  );
 }
