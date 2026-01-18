@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <main>
@@ -83,7 +85,7 @@ function ImportantLinks() {
         </li>
 
         <li>
-          <a href="/status">Endpoint /status</a>
+          <Link href="/status">Endpoint /status</Link>
         </li>
 
         <li>
