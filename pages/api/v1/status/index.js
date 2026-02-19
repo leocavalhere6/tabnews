@@ -6,7 +6,7 @@ const router = createRouter();
 
 router.get(getHandler);
 
-export default router.handler(controller.errorHandlers);
+export default router.handler(controller.errorHandler);
 
 async function getHandler(request, response) {
   const updatedAt = new Date().toISOString();
