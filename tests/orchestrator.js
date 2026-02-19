@@ -24,17 +24,22 @@ async function waitForAllServices() {
 }
 
 async function clearDatabase() {
-  await database.query("drop schema public cascade; create schema public; ");
+  await database.query({
+    text: `
+      DROP SCHEMA public CASCADE;
+      CREATE SCHEMA public;
+    `,
+  });
 }
 
 async function runPendingMigrations() {
-  await migrator.runPendingMigration();
+  await migrator.runPendingMigrations();
 }
 
-const orquestrator = {
+const orchestrator = {
   waitForAllServices,
   clearDatabase,
   runPendingMigrations,
 };
 
-export default orquestrator;
+export default orchestrator;
