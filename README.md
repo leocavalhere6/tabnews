@@ -157,4 +157,4 @@ Full Stack Developer
 
 📧 leocavalhere6@gmail.com  
 🔗 GitHub: https://github.com/leocavalhere6  
-🔗 LinkedIn: https://www.linkedin.com/in/leonardo-cavalhere-59b422340/
+🔗 LinkedIn: https://www.linkedin.com/in/leonardo-cavalhere-59b422340/ 
