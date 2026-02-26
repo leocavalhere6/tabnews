@@ -1,121 +1,136 @@
-# TabNews Clone — Projeto Full Stack
+# TabNews Clone — Full Stack Application
 
-Projeto full stack desenvolvido do zero com foco em **simular um ambiente real de engenharia de software**, incluindo autenticação robusta, API REST versionada, testes automatizados, CI/CD e deploy em produção.
+Full stack application designed and implemented to replicate core TabNews features while following production-grade engineering standards.
 
-🔗 **Demo:** https://tabnews-weld-ten.vercel.app  
-📦 **Repositório:** https://github.com/leocavalhere6/tabnews
+The project emphasizes backend architecture, authentication flows, API stability, automated testing, CI/CD pipelines, and real production deployment.
 
----
+🔗 **Live Application:**  
+https://tabnews-weld-ten.vercel.app  
 
-## 📌 Visão Geral
-
-Este projeto é um clone funcional do TabNews, desenvolvido como um **projeto real de engenharia**, indo além de um CRUD básico.  
-O objetivo foi aplicar **boas práticas profissionais**, cobrindo todo o ciclo de desenvolvimento: arquitetura, backend, frontend, banco de dados, testes, automação e deploy.
+📦 **Repository:**  
+https://github.com/leocavalhere6/tabnews  
 
 ---
 
-## 🧠 Principais Funcionalidades
+## Overview
 
-### 🔐 Autenticação e Autorização
+This project goes beyond a basic CRUD implementation. It was architected to reflect real-world software engineering practices, covering the full development lifecycle:
 
-- Sistema completo de autenticação implementado do zero
-- Hash de senhas com **salt + pepper**
-- Tokens com expiração e renovação de sessão
-- Middleware de autenticação
-- Fluxo de ativação de conta por e-mail
-- Recuperação de conta
+- System design
+- Backend architecture
+- Frontend integration
+- Database modeling
+- Automated testing
+- CI/CD automation
+- Production deployment
 
-### 🌐 API REST
-
-- API REST **versionada (v1)**
-- Controllers organizados
-- Validações server-side
-- Status codes corretos
-- Padronização de erros
-- Endpoints estáveis e testáveis
-
-### 🗄️ Banco de Dados
-
-- PostgreSQL
-- Modelagem relacional normalizada
-- Migrations (up e dry-run)
-- Ambiente totalmente containerizado com Docker
-
-### 🎨 Frontend
-
-- Aplicação React / Next.js
-- Criação de páginas e componentes do zero
-- Integração completa com o backend
-- Página `/status` com dados dinâmicos da API
-- Componentes reutilizáveis (ex: `DatabaseStatus`)
-- Uso de props, estados e abstração de lógica de UI
-- Tratamento e padronização de erros no frontend
+The focus was on building a maintainable, scalable, and well-structured system.
 
 ---
 
-## 🧪 Testes
+## Core Features
 
-- Testes de integração cobrindo fluxos críticos:
-  - Autenticação
-  - Usuários
-  - Sessões
-- Aplicação de conceitos de **TDD e BDD**
-- Garantia de estabilidade dos endpoints
+### Authentication & Authorization
 
----
-
-## ⚙️ CI/CD e Qualidade
-
-- Pipelines de CI/CD com **GitHub Actions**
-- Execução automática de testes
-- Deploy automatizado
-- Padronização de código com:
-  - ESLint
-  - Commitlint
-  - Conventional commits
-  - Git hooks
-  - Semantic Versioning
+- Custom-built authentication system
+- Password hashing with salt + pepper strategy
+- Session management with expiring tokens
+- Authentication middleware
+- Email-based account activation flow
+- Account recovery mechanism
 
 ---
 
-## 🚀 Deploy
+### REST API
 
-- Deploy real em produção na **Vercel**
-- Ambiente de homologação / staging configurado
-- Integração contínua entre código, testes e deploy
-
----
-
-## 🏗️ Arquitetura
-
-- Refatoração completa para arquitetura **MVC**
-- Código modularizado
-- Separação clara de responsabilidades
-- Foco em legibilidade, manutenção e escalabilidade
+- Versioned REST API (`v1`)
+- Structured controllers
+- Server-side validations
+- Standardized error handling
+- Proper HTTP status code usage
+- Stable and testable endpoints
 
 ---
 
-## 🛠️ Stack Utilizada
+### Database Layer
 
-**Backend**
+- PostgreSQL relational database
+- Normalized schema design
+- Migration system (`up` and dry-run support)
+- Fully containerized environment with Docker
 
+---
+
+### Frontend Application
+
+- Built with React and Next.js
+- Full backend integration
+- Dynamic `/status` page consuming live API data
+- Reusable components (e.g., `DatabaseStatus`)
+- UI logic abstraction
+- Standardized frontend error handling
+
+---
+
+## Testing Strategy
+
+Integration tests covering critical flows:
+
+- Authentication
+- User management
+- Session lifecycle
+
+The project incorporates TDD and BDD principles to ensure endpoint reliability and regression safety.
+
+---
+
+## CI/CD & Code Quality
+
+- Automated CI/CD pipelines with GitHub Actions
+- Automatic test execution on push
+- Automated deployment workflow
+- ESLint configuration
+- Commitlint enforcement
+- Conventional Commits standard
+- Git hooks
+- Semantic Versioning strategy
+
+---
+
+## Deployment
+
+- Production deployment on Vercel
+- Staging / homologation environment configured
+- Continuous integration between repository, testing suite, and deployment pipeline
+
+---
+
+## Architecture
+
+- MVC architectural pattern
+- Modularized codebase
+- Clear separation of responsibilities
+- Emphasis on maintainability, readability, and scalability
+
+---
+
+## Tech Stack
+
+### Backend
 - Node.js
-- JavaScript (ESM)
+- JavaScript (ES Modules)
 - PostgreSQL
 - Docker
 
-**Frontend**
-
+### Frontend
 - React
 - Next.js
 
-**Testes & Qualidade**
-
+### Testing & Quality
 - Jest
-- Testes de Integração
+- Integration Testing
 
-**DevOps**
-
+### DevOps
 - Git
 - GitHub Actions
 - CI/CD
@@ -123,20 +138,23 @@ O objetivo foi aplicar **boas práticas profissionais**, cobrindo todo o ciclo d
 
 ---
 
-## 🎯 Objetivo do Projeto
+## Project Goal
 
-Este projeto foi desenvolvido com foco em:
+This project demonstrates the ability to:
 
-- Simular experiência profissional real para desenvolvedor júnior
-- Consolidar fundamentos de engenharia de software
-- Demonstrar capacidade de aprender, estruturar e entregar um sistema completo
+- Architect and implement a full stack application from scratch
+- Design secure authentication flows
+- Structure scalable backend systems
+- Apply automated testing and CI/CD practices
+- Deliver and maintain a production-ready environment
 
 ---
 
-## 👤 Autor
+## Author
 
-**Leonardo Henrique De Oliveira Cavalhere**  
-Desenvolvedor Full Stack  
+Leonardo Henrique De Oliveira Cavalhere  
+Full Stack Developer  
+
 📧 leocavalhere6@gmail.com  
 🔗 GitHub: https://github.com/leocavalhere6  
 🔗 LinkedIn: https://www.linkedin.com/in/leonardo-cavalhere-59b422340/
