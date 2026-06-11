@@ -1,142 +1,174 @@
-# TabNews Clone — Projeto Full Stack
+# 📰 TabNews Clone
 
-Projeto full stack desenvolvido do zero com foco em **simular um ambiente real de engenharia de software**, incluindo autenticação robusta, API REST versionada, testes automatizados, CI/CD e deploy em produção.
+Production-ready Full Stack application inspired by TabNews, built to simulate real-world software engineering practices, including authentication, automated testing, CI/CD pipelines, containerization, and deployment.
 
-🔗 **Demo:** https://tabnews-weld-ten.vercel.app  
-📦 **Repositório:** https://github.com/leocavalhere6/tabnews
+🔗 **Live Demo:** https://tabnews-weld-ten.vercel.app
 
----
-
-## 📌 Visão Geral
-
-Este projeto é um clone funcional do TabNews, desenvolvido como um **projeto real de engenharia**, indo além de um CRUD básico.  
-O objetivo foi aplicar **boas práticas profissionais**, cobrindo todo o ciclo de desenvolvimento: arquitetura, backend, frontend, banco de dados, testes, automação e deploy.
+📦 **Repository:** https://github.com/leocavalhere6/tabnews
 
 ---
 
-## 🧠 Principais Funcionalidades
+# 📌 Overview
 
-### 🔐 Autenticação e Autorização
+This project was developed as a complete Full Stack application with a strong focus on software engineering fundamentals and production-ready development practices.
 
-- Sistema completo de autenticação implementado do zero
-- Hash de senhas com **salt + pepper**
-- Tokens com expiração e renovação de sessão
-- Middleware de autenticação
-- Fluxo de ativação de conta por e-mail
-- Recuperação de conta
+Rather than being a simple CRUD application, the goal was to design, implement, test, automate, and deploy a maintainable and scalable system from end to end.
 
-### 🌐 API REST
+---
 
-- API REST **versionada (v1)**
-- Controllers organizados
-- Validações server-side
-- Status codes corretos
-- Padronização de erros
-- Endpoints estáveis e testáveis
+# 🚀 Features
 
-### 🗄️ Banco de Dados
+## 🔐 Authentication & Authorization
+
+- User registration and authentication
+- Password hashing using bcrypt
+- Session management
+- HttpOnly and Secure cookies
+- Authentication middleware
+- Account activation workflow
+- Password recovery flow
+
+## 🌐 REST API
+
+- Versioned REST API (v1)
+- Structured controllers
+- Server-side validation
+- Standardized error handling
+- Consistent HTTP status codes
+- Testable and maintainable endpoints
+
+## 🗄️ Database
 
 - PostgreSQL
-- Modelagem relacional normalizada
-- Migrations (up e dry-run)
-- Ambiente totalmente containerizado com Docker
+- Relational database modeling
+- Database migrations
+- Dockerized development environment
 
-### 🎨 Frontend
+## 🎨 Frontend
 
-- Aplicação React / Next.js
-- Criação de páginas e componentes do zero
-- Integração completa com o backend
-- Página `/status` com dados dinâmicos da API
-- Componentes reutilizáveis (ex: `DatabaseStatus`)
-- Uso de props, estados e abstração de lógica de UI
-- Tratamento e padronização de erros no frontend
-
----
-
-## 🧪 Testes
-
-- Testes de integração cobrindo fluxos críticos:
-  - Autenticação
-  - Usuários
-  - Sessões
-- Aplicação de conceitos de **TDD e BDD**
-- Garantia de estabilidade dos endpoints
+- React
+- Next.js
+- Dynamic status page
+- Reusable components
+- Backend integration
+- Error handling
+- Responsive user interface
 
 ---
 
-## ⚙️ CI/CD e Qualidade
+# 🧪 Testing
 
-- Pipelines de CI/CD com **GitHub Actions**
-- Execução automática de testes
-- Deploy automatizado
-- Padronização de código com:
-  - ESLint
-  - Commitlint
-  - Conventional commits
-  - Git hooks
-  - Semantic Versioning
+Integration tests covering critical application flows:
 
----
+- Authentication
+- Users
+- Sessions
 
-## 🚀 Deploy
+Concepts applied:
 
-- Deploy real em produção na **Vercel**
-- Ambiente de homologação / staging configurado
-- Integração contínua entre código, testes e deploy
+- TDD (Test-Driven Development)
+- BDD (Behavior-Driven Development)
 
 ---
 
-## 🏗️ Arquitetura
+# ⚙️ CI/CD & Code Quality
 
-- Refatoração completa para arquitetura **MVC**
-- Código modularizado
-- Separação clara de responsabilidades
-- Foco em legibilidade, manutenção e escalabilidade
+Automated workflows built with GitHub Actions:
+
+- Automated testing
+- Continuous Integration
+- Automated deployment
+
+Code quality tools:
+
+- ESLint
+- Commitlint
+- Conventional Commits
+- Git Hooks
+- Semantic Versioning
 
 ---
 
-## 🛠️ Stack Utilizada
+# 🐳 Containerization
 
-**Backend**
+Docker is used to create reproducible and isolated development environments.
+
+Benefits:
+
+- Consistent setup across machines
+- Simplified onboarding
+- Infrastructure reproducibility
+
+---
+
+# 🏗️ Architecture
+
+The application was refactored using the MVC architectural pattern.
+
+Key principles:
+
+- Separation of Concerns
+- Modular Design
+- Maintainability
+- Scalability
+- Clean Code Practices
+
+Software Engineering Concepts Applied:
+
+- SOLID Principles
+- Design Patterns
+- MVC Architecture
+- RESTful API Design
+
+---
+
+# 🛠️ Tech Stack
+
+## Backend
 
 - Node.js
 - JavaScript (ESM)
 - PostgreSQL
 - Docker
 
-**Frontend**
+## Frontend
 
 - React
 - Next.js
 
-**Testes & Qualidade**
+## Testing
 
 - Jest
-- Testes de Integração
+- Integration Testing
 
-**DevOps**
+## DevOps
 
-- Git
 - GitHub Actions
 - CI/CD
+- Docker
 - Vercel
 
 ---
 
-## 🎯 Objetivo do Projeto
+# 🎯 Project Goals
 
-Este projeto foi desenvolvido com foco em:
+This project was built to:
 
-- Simular experiência profissional real para desenvolvedor júnior
-- Consolidar fundamentos de engenharia de software
-- Demonstrar capacidade de aprender, estruturar e entregar um sistema completo
+- Simulate real-world software engineering practices
+- Strengthen backend and full stack development skills
+- Apply software architecture principles
+- Demonstrate the ability to design, build, test, and deploy a complete application
 
 ---
 
-## 👤 Autor
+# 👨‍💻 Author
 
-**Leonardo Henrique De Oliveira Cavalhere**  
-Desenvolvedor Full Stack  
-📧 leocavalhere6@gmail.com  
-🔗 GitHub: https://github.com/leocavalhere6  
-🔗 LinkedIn: https://www.linkedin.com/in/leonardo-cavalhere-59b422340/
+**Leonardo Henrique de Oliveira Cavalhere**
+
+Full Stack Software Engineer
+
+📧 Email: [leocavalhere6@gmail.com](mailto:leocavalhere6@gmail.com)
+
+💼 LinkedIn: https://linkedin.com/in/leonardo-cavalhere
+
+🐙 GitHub: https://github.com/leocavalhere6
