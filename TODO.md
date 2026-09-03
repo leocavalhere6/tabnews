@@ -31,6 +31,10 @@ Limitação de requisições por IP usando Redis.
 
 Bloqueio contra ataques de força bruta em rotas sensíveis.
 
+    PR PROXIMO PR E ESSES Scope: Configures Jest to generate automated coverage reports (LCOV, HTML, text) and sets quality thresholds for infra, models, and api.
+
+Impact: Adds the npm run test:coverage script and updates .gitignore to enable automated quality gates in CI/CD.
+
 PR #6: Testes End-to-End e de API (Playwright)
 
 Configuração do runner do Playwright.

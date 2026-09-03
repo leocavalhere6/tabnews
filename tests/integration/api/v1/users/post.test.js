@@ -7,6 +7,10 @@ beforeAll(async () => {
   await orchestrator.runPendingMigrations();
 });
 
+afterAll(async () => {
+  await orchestrator.dropAllServices();
+});
+
 describe("POST /api/v1/users", () => {
   describe("Anonymous user", () => {
     test("With unique and valid data", async () => {
@@ -117,5 +121,23 @@ describe("POST /api/v1/users", () => {
         status_code: 400,
       });
     });
+  });
+});
+
+describe("Rate limit protection", () => {
+  test("When exceeding maximum requests limit", async () => {
+    for (let i = 0; i < 5; i++) {
+      await fetch("http://localhost:3000/api/v1/users", { method: "POST" });
+    }
+
+    const response = await fetch("http://localhost:3000/api/v1/users", {
+      method: "POST",
+    });
+
+    const responseBody = await response.json();
+
+    expect(response.status).toBe(429);
+    expect(responseBody.name).toBe("TooManyRequestsError");
+    expect(responseBody.status_code).toBe(429);
   });
 });
