@@ -68,6 +68,15 @@ The application includes authentication, user management, posts, social interact
 
 The project includes automated tests covering the main application flows.
 
+## 🧪 Test Coverage
+
+The project includes automated unit and integration test suites built with **Jest**, focusing on isolating the infrastructure layer and core business logic.
+
+- **Infrastructure (`infra/`):** >95% coverage
+- **Data Models (`models/`):** >82% coverage
+- **Branch Logic (Branches):** 80.48% coverage
+- **Functions:** 78.12% coverage
+
 ### Integration Tests
 
 - Authentication
