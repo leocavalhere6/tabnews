@@ -1,5 +1,5 @@
 import controller from "infra/controller.js";
-import { ValidationError, NotFoundError } from "infra/errors.js";
+import { ValidationError } from "infra/errors.js";
 
 function createMockRes() {
   const res = {};
