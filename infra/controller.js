@@ -17,7 +17,11 @@ function onNoMatchHandler(request, response) {
 }
 
 function onErrorHandler(error, request, response) {
-  if (error.name === "ValidationError" || error.name === "NotFoundError") {
+  if (
+    error.name === "ValidationError" ||
+    error.name === "NotFoundError" ||
+    error.name === "TooManyRequestsError"
+  ) {
     logger.warn(
       {
         path: request.url,
