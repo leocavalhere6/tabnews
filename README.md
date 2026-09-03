@@ -1,6 +1,8 @@
-# 📰 TabNews Clone
+# Twitter Clone
 
-Production-ready Full Stack application inspired by TabNews, built to simulate real-world software engineering practices, including authentication, automated testing, CI/CD pipelines, containerization, and deployment.
+A full-stack social platform inspired by Twitter/X, built with **TypeScript, Next.js, PostgreSQL, Redis, and Docker**.
+
+The application includes authentication, user management, posts, social interactions, API validation, automated testing, structured logging, and CI/CD.
 
 🔗 **Live Demo:** https://tabnews-weld-ten.vercel.app
 
@@ -8,167 +10,165 @@ Production-ready Full Stack application inspired by TabNews, built to simulate r
 
 ---
 
-# 📌 Overview
+## 🚀 Tech Stack
 
-This project was developed as a complete Full Stack application with a strong focus on software engineering fundamentals and production-ready development practices.
-
-Rather than being a simple CRUD application, the goal was to design, implement, test, automate, and deploy a maintainable and scalable system from end to end.
+- **TypeScript**
+- **Next.js**
+- **React**
+- **PostgreSQL**
+- **Redis**
+- **Drizzle ORM**
+- **Zod**
+- **Pino**
+- **Jest**
+- **Playwright**
+- **Docker & Docker Compose**
+- **GitHub Actions**
 
 ---
 
-# 🚀 Features
-
-## 🔐 Authentication & Authorization
+## ✨ Features
 
 - User registration and authentication
-- Password hashing using bcrypt
-- Session management
-- HttpOnly and Secure cookies
-- Authentication middleware
-- Account activation workflow
-- Password recovery flow
-
-## 🌐 REST API
-
-- Versioned REST API (v1)
-- Structured controllers
-- Server-side validation
-- Standardized error handling
-- Consistent HTTP status codes
-- Testable and maintainable endpoints
-
-## 🗄️ Database
-
-- PostgreSQL
-- Relational database modeling
-- Database migrations
+- Secure password hashing with Argon2id
+- Session management with HttpOnly and Secure cookies
+- User profiles
+- Posts and social interactions
+- REST API
+- Request validation with Zod
+- IP-based rate limiting with Redis
+- PostgreSQL database with migrations
+- Structured logging with Pino
+- Background processing
+- Integration tests
+- End-to-end tests with Playwright
+- CI/CD with GitHub Actions
 - Dockerized development environment
-
-## 🎨 Frontend
-
-- React
-- Next.js
-- Dynamic status page
-- Reusable components
-- Backend integration
-- Error handling
-- Responsive user interface
 
 ---
 
-# 🧪 Testing
+## 🏗️ Project Structure
 
-Integration tests covering critical application flows:
+```text
+.
+├── .github/        # CI/CD workflows
+├── .husky/         # Git hooks
+├── infra/          # Database and infrastructure
+├── models/         # Data models
+├── pages/          # Application and API routes
+├── styles/         # Global styles
+├── tests/          # Integration and E2E tests
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧪 Testing
+
+The project includes automated tests covering the main application flows.
+
+### Integration Tests
 
 - Authentication
 - Users
 - Sessions
+- API validation
+- Database interactions
+- Rate limiting
 
-Concepts applied:
+### End-to-End Tests
 
-- TDD (Test-Driven Development)
-- BDD (Behavior-Driven Development)
+Playwright is used to test complete user flows through the application.
+
+Run the test suite with:
+
+```bash
+npm test
+```
+
+Run E2E tests with:
+
+```bash
+npm run test:e2e
+```
 
 ---
 
-# ⚙️ CI/CD & Code Quality
+## 🚀 Getting Started
 
-Automated workflows built with GitHub Actions:
+### Prerequisites
 
-- Automated testing
-- Continuous Integration
-- Automated deployment
+- Node.js
+- npm
+- Docker
+- Docker Compose
 
-Code quality tools:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/leocavalhere6/tabnews.git
+
+cd tabnews
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the infrastructure
+
+```bash
+docker compose up -d
+```
+
+### 4. Run database migrations
+
+```bash
+npm run db:migrate
+```
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## ⚙️ CI/CD
+
+GitHub Actions is used for automated:
+
+- Linting
+- Type checking
+- Testing
+- Deployment
+
+---
+
+## 🧹 Code Quality
+
+The project uses:
 
 - ESLint
+- Husky
 - Commitlint
 - Conventional Commits
-- Git Hooks
 - Semantic Versioning
 
 ---
 
-# 🐳 Containerization
-
-Docker is used to create reproducible and isolated development environments.
-
-Benefits:
-
-- Consistent setup across machines
-- Simplified onboarding
-- Infrastructure reproducibility
-
----
-
-# 🏗️ Architecture
-
-The application was refactored using the MVC architectural pattern.
-
-Key principles:
-
-- Separation of Concerns
-- Modular Design
-- Maintainability
-- Scalability
-- Clean Code Practices
-
-Software Engineering Concepts Applied:
-
-- SOLID Principles
-- Design Patterns
-- MVC Architecture
-- RESTful API Design
-
----
-
-# 🛠️ Tech Stack
-
-## Backend
-
-- Node.js
-- JavaScript (ESM)
-- PostgreSQL
-- Docker
-
-## Frontend
-
-- React
-- Next.js
-
-## Testing
-
-- Jest
-- Integration Testing
-
-## DevOps
-
-- GitHub Actions
-- CI/CD
-- Docker
-- Vercel
-
----
-
-# 🎯 Project Goals
-
-This project was built to:
-
-- Simulate real-world software engineering practices
-- Strengthen backend and full stack development skills
-- Apply software architecture principles
-- Demonstrate the ability to design, build, test, and deploy a complete application
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Leonardo Henrique de Oliveira Cavalhere**
 
 Full Stack Software Engineer
 
-📧 Email: [leocavalhere6@gmail.com](mailto:leocavalhere6@gmail.com)
+📧 [leocavalhere6@gmail.com](mailto:leocavalhere6@gmail.com)
 
-💼 LinkedIn: https://linkedin.com/in/leonardo-cavalhere
+💼 https://linkedin.com/in/leonardo-cavalhere
 
-🐙 GitHub: https://github.com/leocavalhere6
+🐙 https://github.com/leocavalhere6
