@@ -7,6 +7,10 @@ beforeAll(async () => {
   await orchestrator.runPendingMigrations();
 });
 
+afterAll(async () => {
+  await orchestrator.dropAllServices();
+});
+
 describe("POST /api/v1/users", () => {
   describe("Anonymous user", () => {
     test("With unique and valid data", async () => {

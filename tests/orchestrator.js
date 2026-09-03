@@ -1,5 +1,6 @@
 import retry from "async-retry";
 import database from "infra/database.js";
+import { redis } from "infra/redis.ts";
 import migrator from "models/migrator.js";
 
 async function waitForAllServices() {
@@ -30,16 +31,22 @@ async function clearDatabase() {
       CREATE SCHEMA public;
     `,
   });
+  await redis.flushall();
 }
 
 async function runPendingMigrations() {
   await migrator.runPendingMigrations();
 }
 
+async function dropAllServices() {
+  await redis.disconnect();
+}
+
 const orchestrator = {
   waitForAllServices,
   clearDatabase,
   runPendingMigrations,
+  dropAllServices,
 };
 
 export default orchestrator;
