@@ -9,9 +9,20 @@ const nextJest = require("next/jest");
 const createJestConfig = nextJest({
   dir: ".",
 });
+
 const jestConfig = createJestConfig({
   moduleDirectories: ["node_modules", "<rootDir>"],
   testTimeout: 60000,
+  collectCoverageFrom: [
+    "infra/**/*.{js,ts}",
+    "models/**/*.{js,ts}",
+    "pages/api/**/*.{js,ts}",
+    "!**/*.test.{js,ts}",
+    "!infra/migrations/**",
+    "!infra/scripts/**",
+  ],
+  coverageReporters: ["text", "lcov", "html"],
+  coverageDirectory: "coverage",
 });
 
 module.exports = jestConfig;
