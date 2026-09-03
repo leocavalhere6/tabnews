@@ -97,3 +97,22 @@ export class MethodNotAllowedError extends Error {
     };
   }
 }
+
+export class TooManyRequestsError extends Error {
+  constructor({ action, ttl } = {}) {
+    super("Too many requests.");
+    this.name = "TooManyRequestsError";
+    this.statusCode = 429;
+    this.action =
+      action ||
+      `You have exceeded the request limit. Try again in ${ttl || 60} seconds.`;
+  }
+  toJSON() {
+    return {
+      name: this.name,
+      message: this.message,
+      action: this.action,
+      status_code: this.statusCode,
+    };
+  }
+}
