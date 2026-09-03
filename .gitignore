@@ -38,3 +38,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?tsconfig.tsbuildinfo
+
+
+TODO.md
+
+tsconfig.tsbuildinfo
